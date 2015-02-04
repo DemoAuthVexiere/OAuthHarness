@@ -1,0 +1,14 @@
+﻿Host: www.vexiereidentity.com
+Connection: keep-alive
+Content-Length: 100
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36
+Cache-Control: no-cache
+Origin: chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop
+Content-Type: application/x-www-form-urlencoded
+Authorization: Basic MTpZVEJpT0RjMU16a3RNR1ExWVMwME56VXhMVGd4WlRVdE56WmlOekkyTm1VNU1UUTVydXQ=
+Postman-Token: 36f34cc5-c8f7-bbfe-e546-7df087dde8da
+Accept: */*
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US,en;q=0.8
+##:
+grant_type=password&username=SuperAdmin&password=zaq1ZAQ%21&scope=openid+offline_access+full_control

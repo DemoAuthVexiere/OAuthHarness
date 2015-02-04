@@ -1,0 +1,1 @@
+﻿?client_id=1&redirect_uri=http://localhost/&response_type=token&scope=openid profile http://www.vexiere.com/oauth/app_name/Root_Default_App&state=5770680743829823&realm=vexieredb&display=popup&nonce=5837139665691129

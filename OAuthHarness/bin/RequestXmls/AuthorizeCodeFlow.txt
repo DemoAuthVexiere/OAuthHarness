@@ -1,0 +1,1 @@
+﻿?client_id=1&scope=openid offline_access http://www.vexiere.com/oauth/app_name/Root_Default_App&redirect_uri=http://localhost/&state=af22cde30e1d418f99674b11856cd28f&response_type=code

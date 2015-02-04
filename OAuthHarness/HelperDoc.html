@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HelperDoc</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h1>OAuth Harness</h1>
+<hr />
+<h3>Endpoints -:</h3>
+<ul>
+<li>/authorize  </li>
+<li>/token  </li>
+<li>/userinfo  </li>
+<li>/end_session  </li>
+<li>/revoke   </li>
+</ul>
+<hr />
+<h3>Actions/Flows-:</h3>
+<ol>
+<li>Authorize code flow  </li>
+<li>Implicit flow  </li>
+<li>Client credentials flow  </li>
+<li>Resource owner flow  </li>
+<li>Get UserInfo by Access token  </li>
+<li>Get Access token by Refresh token  </li>
+<li>Revoke token  </li>
+<li>End session  </li>
+</ol>
+<hr />
+<ul>
+<li>
+<p><strong>Authorize code flow</strong><br />
+This is two step process.<br />
+<strong>Step 1</strong>:- Call is made to authorize endpoint, if session is not present then authorize endpoint will redirect request to common login page.<br />
+After successful authentication, code is returned to the calling application.<br />
+<strong>Step 2</strong>:-  Access token is generated by exchanging the code with token endpoint.<br />
+<strong>Note</strong> -: As oAuth harness does not have capability of redirection, both above steps can not be made simultaneously.<br />
+You have to make first step, then copy the required data from response which will be required in second step.</p>
+<p><strong>How do I use OAuth harness?</strong><br />
+Select '<em>AuthorizeCodeFlow</em> ' from Select Actions dropdown.<br />
+A dummy request will be populated. You can change request parameters if you want.<br />
+Post this request. (As above stated, response of this call is View, so it will redirect you to login page and after successful login it will return Code in response).  <br />
+Now, select '<em>GetAccessTokenByCode</em>' from Actions dropdown.<br />
+Modifiy dummy populated request and use above generated Code in order to get Access token.    
+</p>
+<p><strong>Example-:</strong><br />
+<strong>Step 1</strong>:<br />
+Request Url  
+</p>
+<pre><code> GET https://www.vexiereidentity.com/apis/issue/oidc/authorize?client_id=1&amp;scope=openid offline_access http://www.vexiere.com/oauth/app_name/Root_Default_App&amp;redirect_uri=http://www.vexiereidentity.com/apis/&amp;state=af22cde30e1d418f99674b11856cd28f&amp;response_type=coded       
+</code></pre>
+
+<p>Request Header - NA</p>
+<p>Request Body  - NA</p>
+<p>Response     
+</p>
+<pre><code>&lt;html&gt;&lt;head&gt;&lt;title&gt;Object moved&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;h2&gt;Object moved to &lt;a href=&quot;http://www.vexiereidentity.com/apis:58352/Login.aspx?code=997726b5d49346bdb5de3be17a19c3f5&amp;amp;state=af22cde30e1d418f99674b11856cd28f&amp;amp;session_state=3fd7cd34-5bc9-4c6f-9c48-eea9adb27857&quot;&gt;here&lt;/a&gt;.&lt;/h2&gt;&lt;/body&gt;&lt;/html&gt;
+</code></pre>
+
+<p><a href="Index.aspx?&amp;Id=0" target="_blank"><b>Try It Out</b></a></p>
+<p><strong>Step 2</strong>:<br />
+Request Url    
+</p>
+<pre><code>POST https://idp.vexiere.com:4443/issue/oidc/token  
+</code></pre>
+
+<p>Request Header  
+</p>
+<pre><code>Authorization: Basic MTpYWVpNd09HUTNZall0TlRka1lTMDBZakpqTFRnMFpUTXRNREF3TUROa01qVTRaalhZWg==  
+</code></pre>
+
+<p>Request Body  
+</p>
+<pre><code>grant_type=authorization_code&amp;code=997726b5d49346bdb5de3be17a19c3f5&amp;redirect_uri=http://www.vexiereidentity.com/apis/Login.aspx  
+</code></pre>
+
+<p>Response</p>
+<pre><code>{&quot;id_token&quot;:&quot;eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6ImhiSjItdTBSdHNpX0cxTW56SlFyVnVmQjllcyJ9.eyJpc3MiOiJodHRwOi8vdmV4aWVyZS52Mi50YXZpc2NhLmNvbS9pZHAiLCJhdWQiOiIxIiwibmJmIjoxNDE5NTc1NzQ4LCJleHAiOjE0MTk1NzkzNDgsImNsaWVudF9pZCI6IjEiLCJ1c2VyX2lkIjoiMTAwMDAwMSIsImFwcGxpY2F0aW9uX2lkIjoiMSIsInN1YiI6IjEjZWIwOGJhOTUtMDYwYS00OGNkLWJiNjgtZjM2Y2IyYWI4ZjI0I1N1cGVyQWRtaW4iLCJpYXQiOiIxNDE5NTc1NzQ5In0.jD7buZXCwGGItGFJuNHiEznyaKeaw1ZBpVi3EB7OUZkG1bM-Vt71RmU2GjtMM8vT6gx9rEyGcLLwcfKaMUuE08fAnewZvjA7_b9M82kKBFcThS51t-rEXS7JgvbFEwrAEWXJc9oEfPOPknFPnN_DEsC0BpetJ3rAhZY8GGKoLYY6JO29KqwE-k81Sb-BDKixl_zY6SZUK4Y-_ObSQ2Bs2JllbOh21MktpthfmcmIvXxBCpuSHN0p9vM7t2nVWC9899H3T3aVHTVPvDy1LB7NylacwYwLzYaHZqfRTYo9B11jP1dFwri8Mxp7RapotHfGxmwUsg0Kpjxk9Jj7KHMKmg&quot;,&quot;access_token&quot;:&quot;eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6ImhiSjItdTBSdHNpX0cxTW56SlFyVnVmQjllcyJ9.eyJpc3MiOiJodHRwOi8vdmV4aWVyZS52Mi50YXZpc2NhLmNvbS9pZHAiLCJhdWQiOiJodHRwOi8vdmV4aWVyZS52Mi50YXZpc2NhLmNvbS9pZHAvdXNlcmluZm8iLCJuYmYiOjE0MTk1NzU3NDgsImV4cCI6MTQxOTY2MjE0OCwic2NvcGUiOlsib3BlbmlkIiwib2ZmbGluZV9hY2Nlc3MiLCIiXSwic3ViIjoiMSNlYjA4YmE5NS0wNjBhLTQ4Y2QtYmI2OC1mMzZjYjJhYjhmMjQjU3VwZXJBZG1pbiIsImNsaWVudF9pZCI6IjEiLCJ1c2VyX2lkIjoiMTAwMDAwMSIsImFwcGxpY2F0aW9uX2lkIjoiMSJ9.fonIy4u3nooEgOti9zNV-ND-zfyNArOSAf272OEYGw3Z2cvjEsxyidK1am7Ej0bnyFH98ucSlD86bfUBtkZiQouEw-7mcWtUjL9tvgLvbUOfAUu3PsjFJSbk0HwWGFTByofQrF07Hhtp_eZiOuNHAohBWT3FzhoC6YkA8jHJho_6pGSPIbrvRCZquuQ8dHblcbXRJv0DcRaGmFeY_Php_CI_UYKNf9CoinkNIt6rvq1kBBSBdJJ5HaLVUnkJXPSCyKLxC6dk8ECFAxXssnl3S7OKdaWGEJ6UcdCgZTMDjDST96iVAS-InFMQpxjEweQqjvyMvPlBKYj0ME-X-wvjFQ&quot;,&quot;token_type&quot;:&quot;Bearer&quot;,&quot;expires_in&quot;:86400,&quot;refresh_token&quot;:&quot;5e2c6f21ca5745c5849e2868cea6e8a9&quot;}
+</code></pre>
+
+<p><a href="Index.aspx?&amp;Id=1" target="_blank"><b>Try It Out</b></a></p>
+</li>
+<li>
+<p><strong>Implicit flow</strong>  <br />
+ Like authorize code flow, this flow also require redirection and cannot be done in one step form OAuth harness.<br />
+<strong>How do I use OAuth harness?</strong><br />
+ Select '<em>ImplicitFlow</em>' from Select Actions dropdown.<br />
+A dummy request will be populated. You can change request parameters if you want.  <br />
+You will get access token in response.  <br />
+<strong>Example-:</strong><br />
+Request Url  
+</p>
+<pre><code>GET https://www.vexiereidentity.com/apis/issue/oidc/authorize?client_id=1&amp;redirect_uri=http://www.vexiereidentity.com/apis/&amp;response_type=token&amp;scope=openid profile http://www.vexiere.com/oauth/app_name/Root_Default_App&amp;state=5770680743829823&amp;realm=vexieredb&amp;display=popup&amp;nonce=5837139665691129  
+</code></pre>
+
+<p>Request Header - NA    
+</p>
+<p>Request Body - NA</p>
+<p>Response  
+</p>
+<pre><code>&lt;html&gt;&lt;head&gt;&lt;title&gt;Object moved&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;h2&gt;Object moved to &lt;a href=&quot;https://www.vexiereidentity.com/apis:3000/callback.html#access_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6ImhiSjItdTBSdHNpX0cxTW56SlFyVnVmQjllcyJ9.eyJpc3MiOiJodHRwOi8vdmV4aWVyZS52Mi50YXZpc2NhLmNvbS9pZHAiLCJhdWQiOiJodHRwOi8vdmV4aWVyZS52Mi50YXZpc2NhLmNvbS9pZHAvdXNlcmluZm8iLCJuYmYiOjE0MTk1NzQ3NzgsImV4cCI6MTQxOTY2MTE3OCwic2NvcGUiOlsib3BlbmlkIiwicHJvZmlsZSIsIiJdLCJzdWIiOiIxIzAwMmQ3NDEyLTg1YzQtNDc2ZC05MzQyLTkxODNkZGZlMGM5MiNTdXBlckFkbWluIiwiY2xpZW50X2lkIjoiMSIsInVzZXJfaWQiOiIxMDAwMDAxIiwiYXBwbGljYXRpb25faWQiOiIxIn0.jRJ2bGLKH06sOcadU8gdBpdC6dnz6Uw-VlpirHf_g-w9toGi6m8muIunoQ4qihPkDVyXWoj0VZYOF_QpxeE_Ibm5mdhdEc58yuS0tyXF-gzm9Z7e2X-RnB-N_OoeHLK_Khmb7TCTTzTh9MYJjwWxkfUT1nLyG51o8wHo_rHKkb9NtmW593_NaYXXyPmb27FOzhKzxOKNiD1i_JfYxkW5cFLvGaNLKQNRpk-mgi__rN7VKrHEnu-0TZ_X15XbqXOFSgvYMkIeeF-N0_oRLS-H-qnQ1jK0eZtKjZFEty5IFhypmeTLe5d-360IGn-_CFIQX9oA94dsPh5uML6REbV8qw&amp;amp;token_type=Bearer&amp;amp;expires_in=86400&amp;amp;state=5770680743829823&amp;amp;nonce=5837139665691129&amp;amp;session_state=c54b1e2e-b6d1-4678-b15c-ad834c500df2&quot;&gt;here&lt;/a&gt;.&lt;/h2&gt;&lt;/body&gt;&lt;/html&gt;
+</code></pre>
+
+<p><a href="Index.aspx?&amp;Id=2" target="_blank"><b>Try It Out</b></a></p>
+</li>
+<li>
+<p><strong>Client credentials flow</strong><br />
+This will return access token on behalf of client.<br />
+<strong>How do I use OAuth harness?</strong>  <br />
+Select '<em>ClientCredentialsFlow</em>' from Select Actions dropdown.<br />
+A dummy request will be populated. You can change request parameters if you want.  <br />
+You will get access token in response.  
+</p>
+<p><strong>Example-:</strong> 	 <br />
+Request Url   
+</p>
+<pre><code>POST https://www.vexiereidentity.com/apis/issue/oidc/token  
+</code></pre>
+
+<p>Request Header  
+</p>
+<pre><code>Authorization: Basic MTpYWVpNd09HUTNZall0TlRka1lTMDBZakpqTFRnMFpUTXRNREF3TUROa01qVTRaalhZWg==  
+</code></pre>
+
+<p>Request Body  
+</p>
+<pre><code>grant_type=client_credentials&amp;scope=openid offline_access 
+</code></pre>
+
+<p>Response </p>
+<pre><code>&quot;id_token&quot;:&quot;eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6ImhiSjItdTBSdHNpX0cxTW56SlFyVnVmQjllcyJ9.eyJpc3MiOiJodHRwOi8vdmV4aWVyZS52Mi50YXZpc2NhLmNvbS9pZHAiLCJhdWQiOiIxIiwibmJmIjoxNDE5NTc2ODE5LCJleHAiOjE0MTk1ODA0MTksImNsaWVudF9pZCI6IjEiLCJ1c2VyX2lkIjoiMCIsImFwcGxpY2F0aW9uX2lkIjoiMCIsInN1YiI6IjEiLCJpYXQiOiIxNDE5NTc2ODIwIn0.sRTBU7wOpTF-7qih4ji0VS4gubsI5R9JVC_9G6VD1g46siFZqsljZZcyvikRdZ256KTyV9tcD8oUqTWje4bLwWfTjAUlBrXa0e3XZ_k9VblA-a0MvRL8kMjlr82yGtHqM0asDZJObVg4SIy96TPdmtJqkCqc57G3gKm_MlEToXtfWg7yxSqeLaaeqxd7gpKIO4cFaEU2USyEKVNOfUFnuFK4E9cklq8Kh0RsNZt_cxARRyOs4odI91uFU5QwHHSOe4A_ZVB0MF9MFU1CcJj4e24J3HpPiQKE2mPxXAAiYZzuLBtAQA-jcq1PUhHX-1cMNJmEmc8JDmFdf0Tg8s4Wlw&quot;,&quot;access_token&quot;:&quot;eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6ImhiSjItdTBSdHNpX0cxTW56SlFyVnVmQjllcyJ9.eyJpc3MiOiJodHRwOi8vdmV4aWVyZS52Mi50YXZpc2NhLmNvbS9pZHAiLCJhdWQiOiJodHRwOi8vdmV4aWVyZS52Mi50YXZpc2NhLmNvbS9pZHAvdXNlcmluZm8iLCJuYmYiOjE0MTk1NzY4MTksImV4cCI6MTQxOTY2MzIxOSwic2NvcGUiOlsib3BlbmlkIiwib2ZmbGluZV9hY2Nlc3MiXSwic3ViIjoiMSIsImNsaWVudF9pZCI6IjEiLCJ1c2VyX2lkIjoiMCIsImFwcGxpY2F0aW9uX2lkIjoiMCJ9.j2VfyLRd1eUTddj3NFjesKlB4pbTe0P6b-1wu8O-4bkQU6fRnegtrgUf7AFL8vCbFzIy8kpWxeQdIptga9Bb8NiXh6RGufB_kDbJfpMYKqrRPX8no9nloteMwxmXsBlGLiy-9rLHw0InYTXf1a31aOId8uIbGes8PZfQy4C4wtTr4CU7QJJZxLuOiY92MpDEMKBbLfVMpvyADxPiOXHZ6AxYsUF1zvXBQ0Z2mBcvffQp3ermre3E_ezYpozNTWdA8efnuV5YRBIqP4uPH1S7EY42d5cR5UzrDAuI-fV4YYIJQgh7xTJ6RCNWcfDBKGEJYNOHlxodfn1ux05ODYeoaQ&quot;,&quot;token_type&quot;:&quot;Bearer&quot;,&quot;expires_in&quot;:86400,&quot;refresh_token&quot;:&quot;6bc5514fc6b1451288f69e0e75ebc9ab&quot;}    
+</code></pre>
+
+<p><a href="Index.aspx?&amp;Id=3" target="_blank"><b>Try It Out</b></a></p>
+</li>
+<li>
+<p><strong>Resource owner flow</strong><br />
+ This will return access token on behalf of client as well as user.<br />
+<strong>How do I use OAuth harness?</strong>  <br />
+Select '<em>ResourceOwnerFlow</em>' from Select Actions dropdown.<br />
+A dummy request will be populated. You can change request parameters if you want.  <br />
+You will get access token in response.  
+</p>
+<p><strong>Example-:</strong> 	 <br />
+Request Url </p>
+<pre><code>POST https://www.vexiereidentity.com/apis/issue/oidc/token  
+</code></pre>
+
+<p>Request Header  
+</p>
+<pre><code>Authorization: Basic MTpYWVpNd09HUTNZall0TlRka1lTMDBZakpqTFRnMFpUTXRNREF3TUROa01qVTRaalhZWg==
+</code></pre>
+
+<p>Request Body  
+</p>
+<pre><code>grant_type=password&amp;username=SuperAdmin&amp;password=zaq1ZAQ!&amp;scope=openid profile full_control offline_access  
+</code></pre>
+
+<p>Response </p>
+<pre><code>&quot;id_token&quot;:&quot;eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6ImhiSjItdTBSdHNpX0cxTW56SlFyVnVmQjllcyJ9.eyJpc3MiOiJodHRwOi8vdmV4aWVyZS52Mi50YXZpc2NhLmNvbS9pZHAiLCJhdWQiOiIxIiwibmJmIjoxNDE5NTc2ODE5LCJleHAiOjE0MTk1ODA0MTksImNsaWVudF9pZCI6IjEiLCJ1c2VyX2lkIjoiMCIsImFwcGxpY2F0aW9uX2lkIjoiMCIsInN1YiI6IjEiLCJpYXQiOiIxNDE5NTc2ODIwIn0.sRTBU7wOpTF-7qih4ji0VS4gubsI5R9JVC_9G6VD1g46siFZqsljZZcyvikRdZ256KTyV9tcD8oUqTWje4bLwWfTjAUlBrXa0e3XZ_k9VblA-a0MvRL8kMjlr82yGtHqM0asDZJObVg4SIy96TPdmtJqkCqc57G3gKm_MlEToXtfWg7yxSqeLaaeqxd7gpKIO4cFaEU2USyEKVNOfUFnuFK4E9cklq8Kh0RsNZt_cxARRyOs4odI91uFU5QwHHSOe4A_ZVB0MF9MFU1CcJj4e24J3HpPiQKE2mPxXAAiYZzuLBtAQA-jcq1PUhHX-1cMNJmEmc8JDmFdf0Tg8s4Wlw&quot;,&quot;access_token&quot;:&quot;eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6ImhiSjItdTBSdHNpX0cxTW56SlFyVnVmQjllcyJ9.eyJpc3MiOiJodHRwOi8vdmV4aWVyZS52Mi50YXZpc2NhLmNvbS9pZHAiLCJhdWQiOiJodHRwOi8vdmV4aWVyZS52Mi50YXZpc2NhLmNvbS9pZHAvdXNlcmluZm8iLCJuYmYiOjE0MTk1NzY4MTksImV4cCI6MTQxOTY2MzIxOSwic2NvcGUiOlsib3BlbmlkIiwib2ZmbGluZV9hY2Nlc3MiXSwic3ViIjoiMSIsImNsaWVudF9pZCI6IjEiLCJ1c2VyX2lkIjoiMCIsImFwcGxpY2F0aW9uX2lkIjoiMCJ9.j2VfyLRd1eUTddj3NFjesKlB4pbTe0P6b-1wu8O-4bkQU6fRnegtrgUf7AFL8vCbFzIy8kpWxeQdIptga9Bb8NiXh6RGufB_kDbJfpMYKqrRPX8no9nloteMwxmXsBlGLiy-9rLHw0InYTXf1a31aOId8uIbGes8PZfQy4C4wtTr4CU7QJJZxLuOiY92MpDEMKBbLfVMpvyADxPiOXHZ6AxYsUF1zvXBQ0Z2mBcvffQp3ermre3E_ezYpozNTWdA8efnuV5YRBIqP4uPH1S7EY42d5cR5UzrDAuI-fV4YYIJQgh7xTJ6RCNWcfDBKGEJYNOHlxodfn1ux05ODYeoaQ&quot;,&quot;token_type&quot;:&quot;Bearer&quot;,&quot;expires_in&quot;:86400,&quot;refresh_token&quot;:&quot;6bc5514fc6b1451288f69e0e75ebc9ab&quot;}   
+</code></pre>
+
+<p><a href="Index.aspx?&amp;Id=4" target="_blank"><b>Try It Out</b></a></p>
+</li>
+<li>
+<p><strong>Get UserInfo by Access token</strong><br />
+This endpoint will return user information by accepting access token.<br />
+<strong>How do I use OAuth harness?</strong>  <br />
+Select '<em>GetUserInfoByAccessToken</em>' from Select Actions dropdown.<br />
+A dummy request will be populated. Change request parameters if you want.  <br />
+You will get user info related to that access token in response.  
+</p>
+<p><strong>Example-:</strong> 	 <br />
+Request Url </p>
+<pre><code>POST https://www.vexiereidentity.com/apis/issue/oidc/userinfo  
+</code></pre>
+
+<p>Request Header </p>
+<pre><code>Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6ImhiSjItdTBSdHNpX0cxTW56SlFyVnVmQjllcyJ9.eyJpc3MiOiJodHRwOi8vdmV4aWVyZS52Mi50YXZpc2NhLmNvbS9pZHAiLCJhdWQiOiJodHRwOi8vdmV4aWVyZS52Mi50YXZpc2NhLmNvbS9pZHAvdXNlcmluZm8iLCJuYmYiOjE0MTk1NzQ3NzgsImV4cCI6MTQxOTY2MTE3OCwic2NvcGUiOlsib3BlbmlkIiwicHJvZmlsZSIsIiJdLCJzdWIiOiIxIzAwMmQ3NDEyLTg1YzQtNDc2ZC05MzQyLTkxODNkZGZlMGM5MiNTdXBlckFkbWluIiwiY2xpZW50X2lkIjoiMSIsInVzZXJfaWQiOiIxMDAwMDAxIiwiYXBwbGljYXRpb25faWQiOiIxIn0.jRJ2bGLKH06sOcadU8gdBpdC6dnz6Uw-VlpirHf_g-w9toGi6m8muIunoQ4qihPkDVyXWoj0VZYOF_QpxeE_Ibm5mdhdEc58yuS0tyXF-gzm9Z7e2X-RnB-N_OoeHLK_Khmb7TCTTzTh9MYJjwWxkfUT1nLyG51o8wHo_rHKkb9NtmW593_NaYXXyPmb27FOzhKzxOKNiD1i_JfYxkW5cFLvGaNLKQNRpk-mgi__rN7VKrHEnu-0TZ_X15XbqXOFSgvYMkIeeF-N0_oRLS-H-qnQ1jK0eZtKjZFEty5IFhypmeTLe5d-360IGn-_CFIQX9oA94dsPh5uML6REbV8qw  
+</code></pre>
+
+<p>Request Body -NA</p>
+<p>Response   
+</p>
+<pre><code>{&quot;http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name&quot;:&quot;1#002d7412-85c4-476d-9342-9183ddfe0c92#SuperAdmin&quot;,&quot;client_id&quot;:&quot;1&quot;}    
+</code></pre>
+
+<p><a href="Index.aspx?&amp;Id=5" target="_blank"><b>Try It Out</b></a></p>
+</li>
+<li>
+<p><strong>Get Access token by Refresh token</strong><br />
+This endpoint lets you get new access token by providing refresh token.  <br />
+<strong>How do I use OAuth harness?</strong>  <br />
+Select '<em>GetAccessTokenByRefreshToken</em>' from Select Actions dropdown.<br />
+A dummy request will be populated. Change request parameters if you want.  <br />
+You will get new access token in response.  
+</p>
+<p><strong>Example-:</strong> 	 <br />
+Request Url    
+</p>
+<pre><code>POST https://www.vexiereidentity.com/apis/issue/oidc/token  
+</code></pre>
+
+<p>Request Header  
+</p>
+<pre><code>Authorization: Basic MTpYWVpNd09HUTNZall0TlRka1lTMDBZakpqTFRnMFpUTXRNREF3TUROa01qVTRaalhZWg==  
+</code></pre>
+
+<p>Request Body </p>
+<pre><code>grant_type=refresh_token&amp;refresh_token=45e9e8d4562d4c7d9314af4194b47e79  
+</code></pre>
+
+<p>Response </p>
+<pre><code>{&quot;id_token&quot;:&quot;eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6ImhiSjItdTBSdHNpX0cxTW56SlFyVnVmQjllcyJ9.eyJpc3MiOiJodHRwOi8vdmV4aWVyZS52Mi50YXZpc2NhLmNvbS9pZHAiLCJhdWQiOiIxIiwibmJmIjoxNDE5NTc2NTEwLCJleHAiOjE0MTk1ODAxMTAsImNsaWVudF9pZCI6IjEiLCJ1c2VyX2lkIjoiMTAwMDAwMSIsImFwcGxpY2F0aW9uX2lkIjoiMCIsInN1YiI6IjEjNDc4OTBhM2UtYjkyZS00MjYzLTgyMzItM2Y4NGQyODM4YzYzI1N1cGVyQWRtaW4iLCJpYXQiOiIxNDE5NTc2NTExIn0.t7KDYHvpEIFnJjJwF8EFLTGdqdnLb3oTG-xgD8t6ZG6OGZZzreRJMib1PSIeyoVQ98Xl40BudvyUBnzGZiBd0TZeHXSyBUc4_xKVkXOLXU5RTSI3gJoTq6GiNCDRvE-kqdoWrm-ibKaIHPGJhtZfZzKUgb-pt9kkJvqLW09uxGmD0zd9Q6nm-xwAEkbEffsxyFx5mDEj1w2VrRW8D73Mo8UVnSCCgMLVhrzKj2GPbaWJ5tDQ4Wz582-EIQke9LCRdVpZJtsLHnKpgzFkMksPHR_HHRW9F0znXMxP7pO50fGifwuLKX4K4DTpefdkP_hxvlcuOLghQIanvdfsG5RAsQ&quot;,&quot;access_token&quot;:&quot;eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6ImhiSjItdTBSdHNpX0cxTW56SlFyVnVmQjllcyJ9.eyJpc3MiOiJodHRwOi8vdmV4aWVyZS52Mi50YXZpc2NhLmNvbS9pZHAiLCJhdWQiOiJodHRwOi8vdmV4aWVyZS52Mi50YXZpc2NhLmNvbS9pZHAvdXNlcmluZm8iLCJuYmYiOjE0MTk1NzY1MTAsImV4cCI6MTQxOTY2MjkxMCwic2NvcGUiOlsib3BlbmlkIiwicHJvZmlsZSIsImZ1bGxfY29udHJvbCIsIm9mZmxpbmVfYWNjZXNzIl0sInN1YiI6IjEjNDc4OTBhM2UtYjkyZS00MjYzLTgyMzItM2Y4NGQyODM4YzYzI1N1cGVyQWRtaW4iLCJjbGllbnRfaWQiOiIxIiwidXNlcl9pZCI6IjEwMDAwMDEiLCJhcHBsaWNhdGlvbl9pZCI6IjAifQ.sWbc3GI27xojXSGWgIdZR01-bvuTGnKzHRHG_B1e1uOzoFuXvXd6gUq6NEqribkSwTbgre1hoie8tpJDJvncQ8pB2bNCbDhoYxknqwDN7Fkv6a3c_SIX14mkqoQ3RBsMd_Oc-g9NCQtXacTgwT7m3WIv_g3eKo7PbSTJUQ5GG_Rbe2gXEQIhCK8k2zrjNr22hVC1ULm2gRupB1DTni6xcLlcOQoIgk75agSUiWr06r4tDuwL5p-hem57OL3JZsXLaUiD_yDsSo2M9eslF2cHANJ_FNCSUHtHHE07cumd4TPBsuQP6jdLg7eSMXZzcSP6xx8ePx7JjaeXjjESzHJl6Q&quot;,&quot;token_type&quot;:&quot;Bearer&quot;,&quot;expires_in&quot;:86400,&quot;refresh_token&quot;:&quot;45e9e8d4562d4c7d9314af4194b47e79&quot;}    
+</code></pre>
+
+<p><a href="Index.aspx?&amp;Id=6" target="_blank"><b>Try It Out</b></a></p>
+</li>
+<li>
+<p><strong>Revoke token</strong><br />
+This endpoint lets revoke access token.  <br />
+<strong>How do I use OAuth harness?</strong>  <br />
+Select '<em>RevokeToken</em>' from Select Actions dropdown.<br />
+A dummy request will be populated. Change request parameters if you want.  <br />
+It will only return success code in response.  
+</p>
+<p><strong>Example-:</strong> 	 <br />
+Request Url  
+</p>
+<pre><code>POST https://www.vexiereidentity.com/apis/issue/oidc/revoke  
+</code></pre>
+
+<p>Request Header </p>
+<pre><code>Authorization: Basic MTpYWVpNd09HUTNZall0TlRka1lTMDBZakpqTFRnMFpUTXRNREF3TUROa01qVTRaalhZWg==  
+</code></pre>
+
+<p>Request Body  
+</p>
+<pre><code>token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6ImhiSjItdTBSdHNpX0cxTW56SlFyVnVmQjllcyJ9.eyJpc3MiOiJodHRwOi8vdmV4aWVyZS52Mi50YXZpc2NhLmNvbS9pZHAiLCJhdWQiOiJodHRwOi8vdmV4aWVyZS52Mi50YXZpc2NhLmNvbS9pZHAvdXNlcmluZm8iLCJuYmYiOjE0MTk1NzY3MDcsImV4cCI6MTQxOTY2MzEwNywic2NvcGUiOlsib3BlbmlkIiwicHJvZmlsZSIsImZ1bGxfY29udHJvbCIsIm9mZmxpbmVfYWNjZXNzIl0sInN1YiI6IjEjNGQxYjE0NjctM2NlMC00MDE1LTkyNDMtMzBiODQ2MjkxZjExI1N1cGVyQWRtaW4iLCJjbGllbnRfaWQiOiIxIiwidXNlcl9pZCI6IjEwMDAwMDEiLCJhcHBsaWNhdGlvbl9pZCI6IjAifQ.Om-8mfY5B4hTKGgZ-6e9bVEuEdMjGKLMP_t9xkD30gi5lW7AwR6JpARpnSQXlx4o3ignu1Z2fybY6Pv3SRIj4dtsnUnX050jtcVRoAOWPLug0xhmzsTTjDdpq1cOlutiEY0KBfRkzfokQ3a2qPNCJJsKJtfHX4qK-H9LMvzwdL0BKgwZKTIxtp5PK6AVF4fiDv1MEDT_usPo3OlcLHALM86lF68FpE6WgFO6T-U_SnANUKEpfRZ8YJuUMinq01Gp1BzX9XHV3iPgiGfsxlwjpMyNB9HXD1c2_dP3KkZGjpE9oDSeXxxZHyfKluoVfBAvUEa4N0sDfuiJTjT4gfU1QQ&amp;token_type_hint=access_token 
+</code></pre>
+
+<p>Response   
+</p>
+<pre><code>200 OK    
+</code></pre>
+
+<p><a href="Index.aspx?&amp;Id=7" target="_blank"><b>Try It Out</b></a></p>
+</li>
+<li>
+<p><strong>End session</strong><br />
+This endpoint lets you destroy current active session.  <br />
+<strong>How do I use OAuth harness?</strong> <br />
+Select '<em>EndSession</em>' from Select Actions dropdown.<br />
+A dummy request will be populated. Change request parameters if you want.  <br />
+It will only return success code in response.    
+</p>
+<p><strong>Example-:</strong> 	 <br />
+Request Url </p>
+<pre><code>GET http://www.vexiereidentity.com/apis/issue/oidc/end_session?id_token_hint=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6ImhiSjItdTBSdHNpX0cxTW56SlFyVnVmQjllcyJ9.eyJpc3MiOiJodHRwOi8vdmV4aWVyZS52Mi50YXZpc2NhLmNvbS9pZHAiLCJhdWQiOiIxIiwibmJmIjoxNDE5NTc3MTA1LCJleHAiOjE0MTk1ODA3MDUsImNsaWVudF9pZCI6IjEiLCJ1c2VyX2lkIjoiMTAwMDAwMSIsImFwcGxpY2F0aW9uX2lkIjoiMSIsInN1YiI6IjEjZWIwOGJhOTUtMDYwYS00OGNkLWJiNjgtZjM2Y2IyYWI4ZjI0I1N1cGVyQWRtaW4iLCJpYXQiOiIxNDE5NTc3MTA2In0.IAAgR_jQ1eDQilCFCYTboYibHUDaoA5KGMFXsfTTE-gBDA4RjYS-yLnP9GjeS5Z7nUdPnSHcxwRQvneN5f_5kA7JF2KiBIp3p5RhopKsU5lLMv0xXXGAYH4rqqO-p67WdnmSNMvqm52AuxfQz1bdlvdtd_zX8o9ZwfL5DTKr5fljvlXUF63s5-uaYPJPOg_sqFMcqTcOjGKMApSXUeV7GWv5kc59295EwWeEwcjO0Fbduj5dBLp60IW_mVQAoWs8GoDpDbnI8f8qkzRuZma-TOlizwnOPu_Zv4gxNB8fxwYV6m0S-IYHzgmuwwc8VoAJRJi2bvIcaH01yByIcb5ZDA&amp;post_logout_redirect_uri=https://www.vexiereidentity.com/apis/
+</code></pre>
+
+<p>Request Header- NA</p>
+<p>Request Body - NA</p>
+<p>Response</p>
+<pre><code>&lt;html&gt;&lt;head&gt;&lt;title&gt;Object moved&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;h2&gt;Object moved to &lt;a href=&quot;https://www.vexiereidentity.com/apis:6443/logout&quot;&gt;here&lt;/a&gt;.&lt;/h2&gt;&lt;/body&gt;&lt;/html&gt;    
+</code></pre>
+
+<p><a href="Index.aspx?&amp;Id=8" target="_blank"><b>Try It Out</b></a></p>
+</li>
+</ul>
+<p><strong><em>Important Note</em></strong> :-- <br />
+In above all endpoints, <strong>Authorization header</strong> content is encoded by base64 encoding.<br />
+So, encode it first if you are changing dummy populated request headers.</p>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

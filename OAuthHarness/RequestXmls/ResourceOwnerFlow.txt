@@ -1,0 +1,3 @@
+﻿Authorization: Basic MTpYWVpNd09HUTNZall0TlRka1lTMDBZakpqTFRnMFpUTXRNREF3TUROa01qVTRaalhZWg==
+
+grant_type=password&username=SuperAdmin&password=zaq1ZAQ!&scope=openid+profile+full_control+offline_access

@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OAuthHarness", "OAuthHarness\OAuthHarness.csproj", "{53D07984-8005-4268-B365-67B8B5485EBD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Dev|Any CPU = Dev|Any CPU
+		Perf|Any CPU = Perf|Any CPU
+		Qa|Any CPU = Qa|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Stage|Any CPU = Stage|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{53D07984-8005-4268-B365-67B8B5485EBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53D07984-8005-4268-B365-67B8B5485EBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53D07984-8005-4268-B365-67B8B5485EBD}.Dev|Any CPU.ActiveCfg = Dev|Any CPU
+		{53D07984-8005-4268-B365-67B8B5485EBD}.Dev|Any CPU.Build.0 = Dev|Any CPU
+		{53D07984-8005-4268-B365-67B8B5485EBD}.Perf|Any CPU.ActiveCfg = Perf|Any CPU
+		{53D07984-8005-4268-B365-67B8B5485EBD}.Perf|Any CPU.Build.0 = Perf|Any CPU
+		{53D07984-8005-4268-B365-67B8B5485EBD}.Qa|Any CPU.ActiveCfg = Qa|Any CPU
+		{53D07984-8005-4268-B365-67B8B5485EBD}.Qa|Any CPU.Build.0 = Qa|Any CPU
+		{53D07984-8005-4268-B365-67B8B5485EBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53D07984-8005-4268-B365-67B8B5485EBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53D07984-8005-4268-B365-67B8B5485EBD}.Stage|Any CPU.ActiveCfg = Stage|Any CPU
+		{53D07984-8005-4268-B365-67B8B5485EBD}.Stage|Any CPU.Build.0 = Stage|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
